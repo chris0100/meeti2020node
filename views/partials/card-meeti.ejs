@@ -1,0 +1,35 @@
+<div class="card">
+
+    <% if (obj.grupo.imagen){ %>
+        <img src="/uploads/grupos/<%= obj.grupo.imagen %>">
+    <% } else { %>
+        <img src="/img/meeti.jpg">
+    <% } %>
+
+    <div class="card-texto">
+
+        <% const fecha = `${obj.fecha} ${obj.hora}` %>
+        <p class="fecha"><%= moment(fecha).format('LLLL') %> horas</p>
+
+        <a href="/meeti/<%= obj.slug %>">
+            <h3><%= obj.titulo %></h3>
+        </a>
+
+        <div class="info-autor">
+
+
+            <div class="imagen">
+                <% if (obj.usuario.imagen) { %>
+                    <img src="/uploads/perfiles/<%= obj.usuario.imagen %>">
+                <% } %>
+            </div>
+
+            <div class="informacion">
+                <p>Organizado por:</p>
+                <p class="autor"><%= obj.usuario.nombre %></p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
