@@ -1,11 +1,12 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('#ubicacion-meeti')) {
-        mosatrarMapa();
+        mostrarMapa();
     }
 });
 
 
-function mosatrarMapa() {
+function mostrarMapa() {
 
     //Obtener los valores
     const lat = document.querySelector('#lat').value,
@@ -37,3 +38,4 @@ function mosatrarMapa() {
 
 
 
+*/

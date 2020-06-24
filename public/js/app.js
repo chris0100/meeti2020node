@@ -4,7 +4,7 @@ import eliminarCOmentario from './eliminarComentario';
 
 const lat = document.querySelector('#lat').value || 3.42158;
 const lng = document.querySelector('#lng').value || -76.5205;
-//const direccion = document.querySelector('#direccion').value || '';
+const direccion = document.querySelector('#direccion').value || '';
 const map = L.map('mapid').setView([lat, lng], 12);
 let markers = new L.FeatureGroup().addTo(map);
 let marker;
