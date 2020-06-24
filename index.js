@@ -78,10 +78,10 @@ app.use('/', router());
 
 //Leer el host y el puerto
 const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 
 
 //agrega el puerto
-app.listen(port,host, () => {
+app.listen(port, () => {
     console.log('el servidor esta funcionando')
 });
