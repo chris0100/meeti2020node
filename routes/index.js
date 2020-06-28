@@ -233,25 +233,5 @@ module.exports = function () {
         usuariosController.guardarImagenPerfilPost);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return router;
 };

@@ -59,7 +59,8 @@
         <div class="campo buscador">
             <label>Coloca la Dirección del Meeti</label>
             <div class="contenedor-input">
-                <input type="text" id="formBuscador" placeholder="Ubicación">
+                <input type="text" id="formBuscador" placeholder="Ubicación"
+                       value="<%= `${meeti.direccion} ${meeti.ciudad}`%>">
                 <small>El asistente colocará una dirección estimada</small>
             </div>
         </div>

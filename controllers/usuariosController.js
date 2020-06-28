@@ -84,6 +84,7 @@ exports.confirmarCuenta = async (req, res, next) => {
 };
 
 
+
 //GET - MUESTRA EL FORMULARIO DE INICIAR SESION
 exports.formIniciarSesion = (req, res) => {
     res.render('iniciar-sesion', {
@@ -142,8 +143,15 @@ exports.cambiarPasswordPost = async (req, res,next) => {
 
     //verificar que el password actual sea correcto
     if (!usuario.validarPassword(req.body.anterior)){
-        req.flash('error', 'Los password no coinciden');
-        res.redirect('/administracion');
+        req.flash('error', 'Ha ocurrido un error, revisa tus datos');
+        res.redirect('/cambiar-password');
+        return next();
+    }
+
+    //verificar que el campo de nuevo password no este vacio
+    if(req.body.nuevo === ''){
+        req.flash('error','Todos los campos deben estar llenos');
+        res.redirect('/cambiar-password');
         return next();
     }
 
@@ -245,6 +253,8 @@ exports.guardarImagenPerfilPost = async (req,res) => {
             return;
         });
     }
+
+
 
     //Si hay imagen nueva, la guardamos
     if (req.file){

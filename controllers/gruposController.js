@@ -167,7 +167,6 @@ exports.editarGrupoPost = async (req,res,next) => {
     const {nombre, descripcion, categoriaId, url} = req.body;
 
 
-
     //asignar los valores
     grupo.nombre = nombre;
     grupo.descripcion = descripcion;

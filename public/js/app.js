@@ -9,7 +9,7 @@ const map = L.map('mapid').setView([lat, lng], 12);
 let markers = new L.FeatureGroup().addTo(map);
 let marker;
 
-//Colocar el pin en edicion
+//Colocar el pin en la ubicacion del mapa edicion
 if (lat && lng) {
     //agregar el pin
     marker = new L.marker([lat,lng], {

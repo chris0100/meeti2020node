@@ -13,11 +13,15 @@ const passport = require('./config/passport');
 
 //Manejo de la base de datos y modelos
 db.sync().then(() => console.log('DB CONECTADA')).catch(error => console.log(error));
+
+
+//Modelos a utilizar
 require('./models/Usuarios');
 require('./models/Categorias');
 require('./models/Grupos');
 require('./models/Meeti');
 require('./models/Comentarios');
+
 
 //Variables de desarrollo
 require('dotenv').config({path: 'variables.env'})

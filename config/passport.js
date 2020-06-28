@@ -6,6 +6,7 @@ passport.use(new LocalStrategy({
         usernameField: 'email',
         passwordField: 'password',
     },
+
     async (email, password, next) => {
         //codigo que se ejecuta la llenar el formulario
         const usuario = await Usuarios.findOne({
@@ -14,7 +15,6 @@ passport.use(new LocalStrategy({
                     email
                 }
         });
-
 
 
         //si no existe el usuario
@@ -31,7 +31,7 @@ passport.use(new LocalStrategy({
         })
 
         //si el usuario existe pero no ha confirmado el correo de activacion
-        if (usuario.activo !== 1) return next(null,false,{
+        if (usuario.activo !== 1) return next(null, false, {
             message: 'El usuario existe, pero debes confirmar en tu bandeja de correo para activarlo'
         })
 
