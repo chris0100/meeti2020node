@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
 function eliminarComentario(e) {
+
     e.preventDefault();
 
+    console.log('has presionado click')
     Swal.fire({
         title: 'Eliminar comentario',
         text: "Un comentario eliminado no se puede recuperar",
@@ -34,6 +37,7 @@ function eliminarComentario(e) {
             const datos = {
                 comentarioId
             };
+
 
             //el this.action y datos es lo que se envia a comentariosControllerFE,
             //ya luego lo que viene es la respuesta que el envia

@@ -9,11 +9,14 @@ exports.panelAdministracion = async (req, res) => {
 
     //consultas
     const consultas = [];
+
+    //Busca todos los grupos
     consultas.push(Grupos.findAll({
         where: {
             usuarioId: req.user.id
         }
     }));
+
 
     //Proximos meetis
     consultas.push(Meeti.findAll({
@@ -25,6 +28,7 @@ exports.panelAdministracion = async (req, res) => {
             ['fecha', 'ASC']
         ]
     }));
+
 
     //Meetis que ya pasaron
     consultas.push(Meeti.findAll({

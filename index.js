@@ -1,7 +1,7 @@
 const express = require('express');
 const router = require('./routes');
 const path = require('path');
-const expressLayouts = require('express-ejs-layouts')
+const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/db');
 const bodyParser = require('body-parser');
 const flash = require('connect-flash');
@@ -24,7 +24,7 @@ require('./models/Comentarios');
 
 
 //Variables de desarrollo
-require('dotenv').config({path: 'variables.env'})
+require('dotenv').config({path: 'variables.env'});
 
 
 //Declara express
@@ -39,8 +39,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());
 
 //Habilitar EJS como template engine
-app.use(expressLayouts)
-app.set('view engine', 'ejs')
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
 
 
 //Ubicacion vistas

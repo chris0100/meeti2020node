@@ -123,9 +123,10 @@ module.exports = function () {
 
     //GET Mostrar formulario de nuevo grupo
     router.get('/nuevo-grupo', authController.usuarioAutenticado,
-                            gruposController.formNuevoGrupo)
+                            gruposController.formNuevoGrupo);
 
-    //POST Cargar imagen para el grupo
+
+    //POST Cargar imagen y completar datos para el grupo
     router.post('/nuevo-grupo', gruposController.subirImagen,
         gruposController.crearGrupoPost);
 
